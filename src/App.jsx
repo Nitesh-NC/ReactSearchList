@@ -6,10 +6,7 @@ function App() {
   const [search, setSearch] = useState("");
 
   const filteredData = data.filter(item =>
-    item.first_name.toLowerCase().startsWith(search.toLowerCase()) ||
-    item.last_name.toLowerCase().startsWith(search.toLowerCase()) ||
-    item.email.toLowerCase().startsWith(search.toLowerCase()) ||
-    item.phone.startsWith(search) 
+    item.first_name.toLowerCase().startsWith(search.toLowerCase())
   );
 
   return (
@@ -19,7 +16,7 @@ function App() {
           <input
             type="text"
             name="search"
-            placeholder="search either using Name, Email or Phone...."
+            placeholder="search by First Name"
             className="bg-white py-4 px-2 rounded-lg w-full max-w-[800px] outline-none  hover:outline-none"
             onChange={(e) => setSearch(e.target.value)}
           />
